@@ -6,27 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Angular JS</title>
+
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
+
   </head>
   <body>
+      {% verbatim %}
       <div class="jumbotron text-center">
           <h1>Technical Test 1</h1>
-          <p>Django REST API Part</p> 
-          <h2>API endpoint: </h2>
-          <p>API Root => /api/v1/</p>
-          <p>List of all contacts => /api/v1/contact/</p>
-          <p>Create New Contact => /api/v1/contact/</p>
-          <p>Update and Delete => /api/v1/contact/id/</p>
+          <p>Angular JS Application</p> 
       </div>
+    <div class="container">
+        <ul class="nav nav-pills">
+            <li role="presentation"><a ui-sref="input_data" ui-sref-activate="activate">Input Data</a></li>
+            <li role="presentation"><a ui-sref="show_data" ui-sref-activate="activate">Show Data</a></li>
+        </ul>
+        <hr>
+        <div class="well well-lg"><h4>Employee Information</h4></div>
+        <div ui-view>
+        </div>
+    </div>
 
+    <!--Angular JS and ui-router CDN-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.20/angular-ui-router.js"></script>
+    <!-- Custom Angular Files-->
+    <script src="static/angular/min.js"></script>
+    <script src="static/angular/save_data_controller.js"></script>
+    <script src="static/angular/retrieve_data_controller.js"></script>
+    <!-- <script src="angular/delete_data_controller.js"></script>
+    <script src="angular/update_data_controller.js"></script> -->
+    <script src="static/angular/directive.js"></script>
+    <script src="static/angular/service.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="static/js/bootstrap.min.js"></script>
+
+    {% endverbatim %}
 
   </body>
 </html>
