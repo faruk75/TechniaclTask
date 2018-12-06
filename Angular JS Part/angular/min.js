@@ -1,0 +1,16 @@
+var app = angular.module('myApp', ['ui.router']);
+
+app.config(function($stateProvider, $urlRouterProvider){
+    $stateProvider
+        .state('input_data',{
+            url : '/input_data',
+            templateUrl : 'templates/input_data.html',
+            controller : 'myControllerOne',
+        })
+        .state('show_data',{
+            url : '/show_data',
+            templateUrl : 'templates/show_data.html',
+            controller : 'myControllerTwo'
+        });
+    $urlRouterProvider.otherwise('/');
+});
