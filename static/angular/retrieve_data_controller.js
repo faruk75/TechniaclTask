@@ -3,9 +3,12 @@ app.controller("myControllerTwo", function($scope, $http,  $state, SharedDataSer
 	// Retrieve Data using SharedDataService
 	//$scope.users = SharedDataService;
 	$http.get("http://127.0.0.1:8000/api/v1/contact/")
-	.then(function(response){
+	.then(function SuccessCallback(response){
 		$scope.users = response.data;
 		console.log($scope.users);
+	},
+	function errorCallback(response){
+		alert('Update NOT Possible');
 	})
 	
     $scope.selectUser = function(user){
@@ -34,11 +37,12 @@ app.controller("myControllerTwo", function($scope, $http,  $state, SharedDataSer
 		.then(
 		function SuccessCallback(response){   
 			alert("Successfully Deleted");
-			//$state.go('show_data');
+			//$state.go('/show_data');
 			// Get method will be called again
 			// Not Working
-			$scope.users = getUpdatedContact();   // Not executing 
-			alert('After getUpdatedContact() method'); // Not executing
+			// $scope.users = SharedDataService.getUpdatedContact();    // SharedDataService.getUpdatedContact is not a function
+			// console.log($scope.users);
+			// alert('After getUpdatedContact() method'); // Not executing
         },
         function errorCallback(response){
             alert('Deletion NOT Possible');
