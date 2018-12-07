@@ -13,10 +13,10 @@ app.controller("myControllerOne", function($scope, $http){
         $http.post("http://127.0.0.1:8000/api/v1/contact/",contact)
         .then(
             function SuccessCallback(response){   
-            alert("Success");
+            alert("Successfully saved in API");
         },
         function errorCallback(response){
-            alert('Error');
+            alert('Error while saving in API');
         })
         $scope.newUser = {};
     };
