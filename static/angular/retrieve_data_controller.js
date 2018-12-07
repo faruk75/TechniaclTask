@@ -1,4 +1,4 @@
-app.controller("myControllerTwo", function($scope, $http,$state){
+app.controller("myControllerTwo", function($scope, $http,  $state, SharedDataService){
 	console.log("Controller Two");
 	// Retrieve Data using SharedDataService
 	//$scope.users = SharedDataService;
@@ -36,11 +36,9 @@ app.controller("myControllerTwo", function($scope, $http,$state){
 			alert("Successfully Deleted");
 			//$state.go('show_data');
 			// Get method will be called again
-			$http.get("http://127.0.0.1:8000/api/v1/contact/")
-			.then(function(response){
-				$scope.users = response.data;
-				console.log($scope.users);
-			})
+			// Not Working
+			$scope.users = getUpdatedContact();   // Not executing 
+			alert('After getUpdatedContact() method'); // Not executing
         },
         function errorCallback(response){
             alert('Deletion NOT Possible');

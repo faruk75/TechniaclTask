@@ -1,20 +1,10 @@
 // Sharing Data Service
-// app.service("SharedDataService", function(){
-//     users = [
-//         {fname: 'Faruk' , nbr: 1111111111},
-//         {fname: 'Faruk2' , nbr: 2222222222},
-//         {fname: 'Faruk3' , nbr: 33333333333}
-//     ];
-//     return users;
-// });
-
-
-// app.service("SharedDataService", function(){
-//     users = [
-//         {
-//             fname:'',
-//             nbr:''
-//         }
-//     ];
-//     return users
-// })
+app.service("SharedDataService", function($http){
+    function getUpdatedContact(){
+        $http.get("http://127.0.0.1:8000/api/v1/contact/")
+        .then(function(response){
+            alert('Inside getUpdatedContact() method');
+            return response.data;
+        })
+    }
+});
