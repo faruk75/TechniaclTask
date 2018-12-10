@@ -1,10 +1,8 @@
 // Save Data
 app.controller("myControllerOne", function($scope, $http){
-    console.log("Controller One");
     $scope.newUser = {};
-    
+
     $scope.saveUser = function(){
-        console.log("Inside Save Method");
         contact = {
             name: $scope.newUser.fname,
             mobileNumber: $scope.newUser.nbr

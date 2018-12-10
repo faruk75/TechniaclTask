@@ -1,4 +1,4 @@
-app.controller("myControllerTwo", function($scope, $http,  $state, SharedDataService){
+app.controller("myControllerTwo", function($scope, $http,  $state){
 	console.log("Controller Two");
 	$http.get("http://127.0.0.1:8000/api/v1/contact/")
 	.then(function SuccessCallback(response){
@@ -11,7 +11,7 @@ app.controller("myControllerTwo", function($scope, $http,  $state, SharedDataSer
     $scope.selectUser = function(user){
 		$scope.clickedUser = user;
 	};
-
+	
 	// Update Data
 	$scope.updateUser = function(){
 		contact = {
