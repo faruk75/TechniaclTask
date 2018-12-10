@@ -1,5 +1,7 @@
 # TechniaclTask
+
  Front End : Angular JS 1.x
+ 
  Backend : Django REST API
  
  use git clone command to clone this reprository 
@@ -16,7 +18,7 @@
  1. input_data 
  2. show_data
  
- Options :
+ # Options :
  1. Enter the Data in Input Data Field
     i. Mobile Number must be a number .
     ii. Data field must be valid .
@@ -24,7 +26,7 @@
  3. Update and delete operation can also be done
  
  
- Directory Structure :
+ # Directory Structure :
  
  Angularjs codes are in TechniaclTask/static/angular
  
