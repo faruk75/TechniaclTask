@@ -11,6 +11,7 @@ app.controller("myControllerTwo", function($scope, $http,  $state, SharedDataSer
 		alert('Update NOT Possible');
 	})
 	
+	// It will be a sharedDataService
     $scope.selectUser = function(user){
 		$scope.clickedUser = user;
 	};
@@ -37,6 +38,7 @@ app.controller("myControllerTwo", function($scope, $http,  $state, SharedDataSer
 		.then(
 		function SuccessCallback(response){   
 			alert("Successfully Deleted");
+			$scope.users.splice($scope.users.indexOf($scope.clickedUser), 1);
 			//$state.go('/show_data');
 			// Get method will be called again
 			// Not Working
