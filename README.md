@@ -22,3 +22,12 @@
     ii. Data field must be valid .
  2. See that data in Show Data Field
  3. Update and delete operation can also be done
+ 
+ 
+ Directory Structure :
+ 
+ Angularjs codes are in TechniaclTask/static/angular
+ 
+ Front end views are in TechniaclTask/static/views
+ 
+ Homepage : templates/index.html
