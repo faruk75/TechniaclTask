@@ -11,11 +11,6 @@ app.config(function($stateProvider, $urlRouterProvider){
             url : '/show_data',
             templateUrl : 'static/views/show_data.html',
             controller : 'myControllerTwo'
-        })
-        .state('show_data.delete',{
-            url : '/show_data',
-            templateUrl : 'static/views/show_data.html',
-            controller : 'myControllerTwo'
         });
     $urlRouterProvider.otherwise('/');
 });

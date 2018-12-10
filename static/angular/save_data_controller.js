@@ -2,8 +2,7 @@
 app.controller("myControllerOne", function($scope, $http){
     console.log("Controller One");
     $scope.newUser = {};
-    //$scope.users = SharedDataService;
-
+    
     $scope.saveUser = function(){
         console.log("Inside Save Method");
         contact = {
